@@ -1,0 +1,33 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Mail</td>
+            <td>Acciones</td>
+        </tr>
+    </thead>
+    <tbody *ngIf="!search; else solopersona">
+        <tr *ngFor="let p of personas">
+            <td>{{p.nombre}}</td>
+            <td>{{p.apellido}}</td>
+            <td>{{p.mail}}</td>
+            <td>
+                <button class="btn btn-warning" type="button" (click)="editPersona(p.id)">Editar</button>
+                <button class="btn btn-danger ms-2" type="button" (click)="deletePersona(p.id)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #solopersona>
+    <tr>
+        <td>{{persona.nombre}}</td>
+        <td>{{persona.apellido}}</td>
+        <td>{{persona.mail}}</td>
+        <td>
+            <button class="btn btn-warning" type="button" (click)="editPersona(persona.id)">Editar</button>
+            <button class="btn btn-danger ms-2" type="button" (click)="deletePersona(persona.id)">Eliminar</button>
+        </td>
+    </tr>
+</ng-template>

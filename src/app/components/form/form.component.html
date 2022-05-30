@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-header text-center">
+        <h2>Registro de persona</h2>
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="submitear()">
+            <div class="form-group my-3">
+                <input type="text" class="form-control py-3" placeholder="Nombre" [(ngModel)]="persona.nombre" name="nombre">
+            </div>
+            <div class="form-group my-3">
+                <input type="text" class="form-control py-3" placeholder="Apellido" [(ngModel)]="persona.apellido" name="apellido">
+            </div>
+            <div class="form-group my-3">
+                <input type="text" class="form-control py-3" placeholder="Mail" [(ngModel)]="persona.mail" name="mail">
+            </div>
+            <div class="form-group my-3">
+                <button class="btn btn-success col-md-12 py-3" type="submit">Registrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+

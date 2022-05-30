@@ -1,0 +1,17 @@
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" routerLink="/vista">Crud Basico</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/vista">Lista de Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/form-user">Registrar</a>
+                </li>
+            </ul>
+            <form class="form-inline ms-auto form">
+                <input class="form-control" type="search" placeholder="Buscar usuario" aria-label="Search" (input)="getValue($event)">
+                <!-- <button class="btn btn-success" type="submit" (click)="getValue(value.value)">Buscar</button> -->
+            </form>
+        </div>
+    </nav>
